@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+img {
+  margin: 0 -4px 0 auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  transform: translateY(-50%);
+  transform: translateX(-1%);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.text-overlay div {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.heading-cap,
+.heading-value {
+  font-family: "Arket Sans SC", HelveticaNeue-Light, "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+.shop-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #070000;
+  text-decoration: none;
+}
