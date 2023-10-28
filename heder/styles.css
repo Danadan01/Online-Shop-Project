@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+}
+body {
+    color: #000;
+    font-weight: 400;
+    font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+}
+body {
+    min-width: 320px;
+}
+body, html {
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    display: block;
+}
+.logo {
+    margin-right: 12px;
+    font-family: 'Arket Sans SC Mono';
+    font-size: 12px;
+    height: 20px;
+}
+/*Styles for the menu */
+
+/* Add  background color to the top navigation */
+.topnav {  
+    font-size: smaller;
+    margin-right: 14px;
+    background-color: #fdfafa;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: .05px;
+    transition: margin-top .5s ease;
+    align-items: flex-end;
+    
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 0 6px;
+    align-items: flex-end;
+
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: black;
+    color: white;
+    padding: 0 6px;
+}
+
+/* Add a color to the active/current link 
+.navbar a.active {
+    background-color: #fdfafa;
+    color: #fb4007;
+ }*/
+
+/* Change the color of the last button on hover 
+.navbar a.active:hover {
+    background-color: #f43e07;
+    color: white;
+}*/
+
+.logo a {
+    background-color: #fdfafa;
+    color: white;
+    height: 17px;
+    display: block;
+}
+  
+  .logo a:hover {
+    background-color: #fdfafa;
+    color: rgb(129, 126, 126);
+  }
+  .a-paragraph a {
+    color:#000;text-decoration:none;
+}
+  .a-paragraph a:visited {
+    text-decoration:none;
+}
+  .a-paragraph a:hover {
+    color:rgb(139, 136, 136);text-decoration:none;
+}
+
+.secondary-navigation  a {
+    background-color: #fdfafa;
+    color: white;
+    margin-left:20px;
+  }
+  .secondary-navigation a:hover {
+    background-color: #fdfafa;
+    color: rgb(129, 126, 126);
+  }
+
+  .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 12;
+    content: "";
+    border: 16px solid transparent;
+    position: absolute;
+    top: -31px;
+
+  } 
+  .dropdown-content .information-section a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .navIcons {
+    font-family: 'Arket Sans SC Mono';
+    font-size: 12px;
+    height: 25px;
+  }
+
+  .topnav .navIcons {
+    font-size: 20px;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  
+  .departments .department-item {
+    font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 6px;
+    letter-spacing: .05px;
+    /*position: relative;*/
+}
+
+.topnav .icon {
+  display: inline-flexbox;
+  
+}
+
+ 
+/*Add media for for adapting the menu buttons and images */ 
+@media (max-width: 992px) {
+    .navLinks a {
+        display: none;
+    }
+    .logo {
+        width: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navLinks {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .navLinks {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 80px;   
+    }
+     }
+
+@media (min-width: 1220px) {
+    .navLinks {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .navLinks {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .navLinks {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .navLinks {
+        font-size: 16px;
+    }
+}
