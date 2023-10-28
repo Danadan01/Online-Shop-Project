@@ -25,6 +25,9 @@ body p {
   display: block;
 }
 
+.content-section {
+  margin-bottom: 50px;
+}
 .content-section .textBox {
   display: flex;
   flex-direction: column;
