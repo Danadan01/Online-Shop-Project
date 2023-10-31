@@ -39,6 +39,131 @@ img {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: white;
-  color: #070000;
   text-decoration: none;
+}
+
+.d-width {
+  width: 90%;
+  max-width: 420px;
+  margin: 10px auto 0;
+  text-align: center;
+}
+.d-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.d-image-container {
+  width: 32.6%;
+  height: 90px;
+
+  border: 0.1px;
+  border-style: inset;
+}
+.d-image-listing {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.d-text-field {
+  margin-bottom: 0;
+}
+.d-headline {
+  text-align: center;
+  margin: 20px 30px 20px 30px;
+}
+.d-text-container {
+  text-align: left;
+  font-size: 14px;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -4px 0 0 0;
+  padding: 0;
+}
+
+.card {
+  width: 340px;
+  height: 400px;
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.women {
+  background-image: url(images/women.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.men {
+  background-image: url(images/men.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.children {
+  background-image: url(images/children.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+
+.homeware {
+  background-image: url(images/homeware.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.baby {
+  background-image: url(images/baby.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.arket {
+  background-image: url(images/gentlewoman.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.travel {
+  background-image: url(images/travel.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+.about {
+  background-image: url(images/about.jpg);
+  width: 340px;
+  height: 580px;
+  position: relative;
+}
+button {
+  padding: 15px 50px;
+  background-color: white;
+  border: none;
+  position: absolute;
+  bottom: 50px;
+  left: 110px;
+  border-radius: 3px;
 }
