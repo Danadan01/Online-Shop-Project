@@ -1,23 +1,31 @@
 body {
-  text-align: center;
+  /* text-align: center; dont think you need it */
+  margin: 0; /* body has default pre-set margin 8px - you should set it to 0 */
+  box-sizing: border-box;
 }
 
 .image-container {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; you can use flex!*/
+  display: flex;
 }
 
-img {
-  margin: 0 -4px 0 auto;
+.image-container img {   /* specify parent class of the images*/
+  /* margin: 0 -4px 0 auto; you don't need this margin */
+
+  /* to make pics look better till 630px */
+  width: 50%;
+  min-height: 55vh; 
+  object-fit: cover;
 }
 
 .text-overlay {
   position: absolute;
   top: 25%;
-  left: 0;
-  transform: translateY(-50%);
+  left: 1%; /* due to left property it would be in the center without padding*/
+  /* transform: translateY(-50%); it doesn't work so you don't need it (check devTools) */
   transform: translateX(-1%);
-  padding: 10px;
+  /* padding: 10px; it creates horizontal scroll - you dont need it */
   width: 100%;
   text-align: center;
 }
@@ -33,6 +41,9 @@ img {
     "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   font-weight: 400;
   font-size: 40px;
+  text-transform: uppercase;   /* You may use it to make your headers look better */
+
+  /* You should make fonts smaller with media rule (they are too big in mobile versions) */
 }
 .shop-button {
   display: inline-block;
@@ -40,6 +51,9 @@ img {
   padding: 10px 20px;
   background-color: white;
   text-decoration: none;
+  color: black;
+  font-family: "Arket Sans SC", HelveticaNeue-Light, "Helvetica Neue Light",
+  "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 
 .d-width {
@@ -81,35 +95,123 @@ img {
   font-size: 14px;
 }
 
-section {
+/* place all code connected to table part not it the middle of your part
+(and if you added them to your main css file you can delete css folder with styles for table) */
+
+/* section {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+}  */
+/* nothing changes because of section styles. you have div container */
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: -4px 0 0 0;
-  padding: 0;
+  flex-direction: column;
+
+  /* flex-wrap: wrap; */
+  /* justify-content: center; you dont have to keep images centered */
+  /* margin: -4px 0 0 0; you dont need this margin */
+  /* padding: 0; */
+}
+
+.card-box {
+  display: flex;
 }
 
 .card {
-  width: 340px;
-  height: 400px;
   display: flex;
-  border: 1px solid #ccc;
-  margin: 0px;
+  align-items: end;
+  justify-content: center;
+  text-decoration: none;
+  width: 25%;
+  background-size: cover;
+  background-position: center;
+
+
+  /* border: 1px solid #ccc; 
+  /* margin: 0px;
   padding: 0px;
   text-align: center;
+   you dont need it*/
+
+
+  padding-bottom: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* position: relative; */
+  /* you didn't use this class, why? You should hav a sungle class for every photo as they are identical (You can specify backgroud-image in html)*/
+
 }
 
-.women {
+.card button {
+  padding: 15px 50px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (max-width:1920px) {
+  .card {
+    height: 45em;
+  }
+}
+
+@media (max-width: 1320px) {
+  .card {
+    height: 35em;
+  }
+}
+
+@media (max-width:1024px) {
+  .card {
+    height: 25em;
+  }
+}
+
+@media (max-width:880px) {
+  .card {
+    height: 20em;
+  }
+}
+
+@media (max-width:768px) {
+  .image-container img {  
+    width: 100%;
+    min-height: 75vh; 
+  }
+
+  .image-container img:nth-child(2) {  
+    display: none;
+  }
+  
+  .card-box {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 50%;
+    height: 35em;
+  }
+}
+
+@media (max-width:600px) {
+  .card {
+    height: 25em;
+  }
+}
+
+@media (max-width:450px) {
+  .card {
+    height: 20em;
+  }
+}
+
+
+/* .women {
   background-image: url(images/women.jpg);
   width: 340px;
   height: 580px;
@@ -157,13 +259,6 @@ section {
   width: 340px;
   height: 580px;
   position: relative;
-}
-button {
-  padding: 15px 50px;
-  background-color: white;
-  border: none;
-  position: absolute;
-  bottom: 50px;
-  left: 110px;
-  border-radius: 3px;
-}
+}  You don't need these classes anymore*/
+
+
