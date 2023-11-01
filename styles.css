@@ -1,31 +1,27 @@
 body {
-  /* text-align: center; dont think you need it */
-  margin: 0; /* body has default pre-set margin 8px - you should set it to 0 */
+  margin: 0;
   box-sizing: border-box;
 }
 
 .image-container {
   position: relative;
-  /* display: inline-block; you can use flex!*/
+
   display: flex;
 }
 
-.image-container img {   /* specify parent class of the images*/
-  /* margin: 0 -4px 0 auto; you don't need this margin */
-
-  /* to make pics look better till 630px */
+.image-container img {
   width: 50%;
-  min-height: 55vh; 
+  min-height: 55vh;
   object-fit: cover;
 }
 
 .text-overlay {
   position: absolute;
   top: 25%;
-  left: 1%; /* due to left property it would be in the center without padding*/
-  /* transform: translateY(-50%); it doesn't work so you don't need it (check devTools) */
+  left: 1%;
+
   transform: translateX(-1%);
-  /* padding: 10px; it creates horizontal scroll - you dont need it */
+
   width: 100%;
   text-align: center;
 }
@@ -37,23 +33,50 @@ body {
 
 .heading-cap,
 .heading-value {
-  font-family: "Arket Sans SC", HelveticaNeue-Light, "Helvetica Neue Light",
-    "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-family: "Arket Sans SC";
   font-weight: 400;
   font-size: 40px;
-  text-transform: uppercase;   /* You may use it to make your headers look better */
-
-  /* You should make fonts smaller with media rule (they are too big in mobile versions) */
+  text-transform: uppercase;
+  color: white;
 }
 .shop-button {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: white;
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   font-family: "Arket Sans SC", HelveticaNeue-Light, "Helvetica Neue Light",
-  "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-decoration: none;
+  width: 25%;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card button {
+  padding: 15px 50px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .d-width {
@@ -95,66 +118,7 @@ body {
   font-size: 14px;
 }
 
-/* place all code connected to table part not it the middle of your part
-(and if you added them to your main css file you can delete css folder with styles for table) */
-
-/* section {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}  */
-/* nothing changes because of section styles. you have div container */
-
-.container {
-  display: flex;
-  flex-direction: column;
-
-  /* flex-wrap: wrap; */
-  /* justify-content: center; you dont have to keep images centered */
-  /* margin: -4px 0 0 0; you dont need this margin */
-  /* padding: 0; */
-}
-
-.card-box {
-  display: flex;
-}
-
-.card {
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  text-decoration: none;
-  width: 25%;
-  background-size: cover;
-  background-position: center;
-
-
-  /* border: 1px solid #ccc; 
-  /* margin: 0px;
-  padding: 0px;
-  text-align: center;
-   you dont need it*/
-
-
-  padding-bottom: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* position: relative; */
-  /* you didn't use this class, why? You should hav a sungle class for every photo as they are identical (You can specify backgroud-image in html)*/
-
-}
-
-.card button {
-  padding: 15px 50px;
-  background-color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-@media (max-width:1920px) {
+@media (max-width: 1920px) {
   .card {
     height: 45em;
   }
@@ -166,28 +130,28 @@ body {
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .card {
     height: 25em;
   }
 }
 
-@media (max-width:880px) {
+@media (max-width: 880px) {
   .card {
     height: 20em;
   }
 }
 
-@media (max-width:768px) {
-  .image-container img {  
+@media (max-width: 768px) {
+  .image-container img {
     width: 100%;
-    min-height: 75vh; 
+    min-height: 75vh;
   }
 
-  .image-container img:nth-child(2) {  
+  .image-container img:nth-child(2) {
     display: none;
   }
-  
+
   .card-box {
     flex-wrap: wrap;
   }
@@ -198,67 +162,14 @@ body {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .card {
     height: 25em;
   }
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
   .card {
     height: 20em;
   }
 }
-
-
-/* .women {
-  background-image: url(images/women.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.men {
-  background-image: url(images/men.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.children {
-  background-image: url(images/children.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-
-.homeware {
-  background-image: url(images/homeware.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.baby {
-  background-image: url(images/baby.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.arket {
-  background-image: url(images/gentlewoman.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.travel {
-  background-image: url(images/travel.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}
-.about {
-  background-image: url(images/about.jpg);
-  width: 340px;
-  height: 580px;
-  position: relative;
-}  You don't need these classes anymore*/
-
-
