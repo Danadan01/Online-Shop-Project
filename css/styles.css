@@ -61,44 +61,30 @@ body {
   padding: 0 6px;
 }
 
-/* Add a color to the active/current link 
-.navbar a.active {
-  background-color: #fdfafa;
-  color: #fb4007;
-}*/
-
-/* Change the color of the last button on hover 
-.navbar a.active:hover {
-  background-color: #f43e07;
-  color: white;
-}*/
-
 .logo a {
   height: 17px;
   display: block;
 }
-
 .logo a:hover {
   background-color: #fdfafa;
   color: rgb(129, 126, 126);
 }
 .a-paragraph a {
-  color:#000;text-decoration:none;
+  color:#000;
+  text-decoration:none;
 }
 .a-paragraph a:visited {
   text-decoration:none;
 }
 .a-paragraph a:hover {
-  color:rgb(139, 136, 136);text-decoration:none;
+  color:rgb(139, 136, 136);
+  text-decoration:none;
 }
 
 .secondary-navigation  a {
-  /*background-color: #fdfafa;
-  /*color: white;*/
   margin-left:20px;
 }
 .secondary-navigation a:hover {
-  /*background-color: #fdfafa;*/
   color:rgb(139, 136, 136);
 }
 .secondary-navigation, .navIcons a.split {
@@ -187,13 +173,7 @@ body {
   font-size: 14px;
   padding: 0 6px;
   letter-spacing: .05px;
-  /*position: relative;*/
 }
-
-/*.topnav .icon {
-display: inline-flexbox;
-}*/
-
 
 .d-width {
   width: 90%;
