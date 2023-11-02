@@ -282,11 +282,6 @@ body {
     height: 35em;
   }
 }
-@media (min-width: 1200px) {
-  .logo {
-      width: 80px;   
-  }
-   }
 @media (max-width: 1024px) {
   .card {
     height: 25em;
@@ -330,3 +325,46 @@ body {
     height: 20em;
   }
 }
+
+@media (min-width: 992px) {
+  .navLinks {
+      font-size: 10px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .navLinks {
+      font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+      width: 80px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .navLinks {
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navLinks {
+      font-size: 13px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .navLinks {
+      font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navLinks {
+      font-size: 16px;
+  }
+}
+
