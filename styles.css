@@ -1,11 +1,18 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Arket Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
 }
+
+body h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+/* main section */
 
 .image-container {
   position: relative;
-
   display: flex;
 }
 
@@ -78,6 +85,139 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+
+/* main section */
+
+/* content section */
+
+.notActive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.content-section {
+  margin-bottom: 50px;
+}
+
+.content-section .textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 50px 0 20px;
+}
+
+.content-section .textBox .header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.content-section .textBox .header span {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.content-section .textBox .header h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.content-section .textBox .content {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  text-align: justify;
+}
+
+.content-section .textBox .content p {
+  margin: 0;
+}
+
+.content-section .textBox .content .readMore .readMoreButton {
+  display: inline;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.content-section .textBox .content .readLess {
+  display: none;
+}
+
+.content-section .textBox .content .readLess .readLessButton {
+  display: inline;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.content-section .ImageBlocksWrapper {
+  display: flex;
+  gap: 5px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.content-section .ImageBlocksWrapper .image-box {
+  width: 100%;
+}
+
+.content-section .ImageBlocksWrapper .image-box img {
+  width: 100%;
+}
+
+.content-section .ImageBlocksWrapper .image-box a {
+  position: relative;
+  text-decoration: none;
+}
+
+.content-section .ImageBlocksWrapper .image-box a:hover .caption {
+  color: grey;
+}
+
+.content-section .ImageBlocksWrapper .image-box .caption {
+  padding: 5px;
+  background-color: #fff;
+  position: absolute;
+  font-size: 10px;
+  color: black;
+  bottom: 10px;
+  left: 8px;
+}
+
+.content-section .ImageBlocksWrapper .image-box .text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.content-section .ImageBlocksWrapper .image-box .text-block h3 {
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.content-section .ImageBlocksWrapper .image-box .text-block p {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+/* content section */
+
+/* table section */
 
 .d-width {
   width: 90%;
@@ -271,6 +411,58 @@ body {
 }
 
 
+/* table section */
+
+/* footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 50px;
+  margin-top: 60px;
+  box-shadow: inset 0px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer ul .countryIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer ul .countryIcon img {
+  border-radius: 4px;
+}
+
+.footer ul li a {
+  font-size: 14px;
+  line-height: 1.3em;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.footer ul li a:hover {
+  color: grey;
+}
+
+/* footer */
+
+/* media rules */
+
 @media (max-width: 1920px) {
   .card {
     height: 45em;
@@ -285,6 +477,10 @@ body {
 @media (max-width: 1024px) {
   .card {
     height: 25em;
+  }
+
+  .content-section .ImageBlocksWrapper {
+    width: 85%;
   }
 }
 
@@ -312,11 +508,72 @@ body {
     width: 50%;
     height: 35em;
   }
+
+  .content-section .textBox .content .readMore {
+    padding: 0 5%;
+  }
+
+  .content-section .ImageBlocksWrapper {
+    flex-wrap: wrap;
+  }
+  .content-section .ImageBlocksWrapper .image-box {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+
+  .footer .topList {
+    border-top: 1px solid black;
+    padding-top: 20px;
+  }
+
+  .footer .bottomList {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 630px) {
+  .content-section .ImageBlocksWrapper {
+    display: inline-block;
+    width: 95%;
+    padding: 0 15px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .content-section .ImageBlocksWrapper .image-box {
+    display: inline-block;
+    width: 95%;
+    margin-bottom: 45px;
+  }
+
+  .content-section .ImageBlocksWrapper .image-box .text-block {
+    white-space: normal;
+  }
+
 }
 
 @media (max-width: 600px) {
   .card {
     height: 25em;
+  }
+
+  .footer {
+    align-items: start;
+  }
+
+  .footer .topList {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer .bottomList {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -367,4 +624,48 @@ body {
       font-size: 16px;
   }
 }
+
+
+@media (min-width: 992px) {
+  .navLinks {
+      font-size: 10px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .navLinks {
+      font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+      width: 80px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .navLinks {
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navLinks {
+      font-size: 13px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .navLinks {
+      font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navLinks {
+      font-size: 16px;
+  }
+}
+
 
