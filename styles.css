@@ -1,11 +1,12 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Arket Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
 }
 
 .image-container {
   position: relative;
-
   display: flex;
 }
 
@@ -118,6 +119,51 @@ body {
   font-size: 14px;
 }
 
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 50px;
+  margin-top: 60px;
+  box-shadow: inset 0px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer ul .countryIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer ul .countryIcon img {
+  border-radius: 4px;
+}
+
+.footer ul li a {
+  font-size: 14px;
+  line-height: 1.3em;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.footer ul li a:hover {
+  color: grey;
+}
+
 @media (max-width: 1920px) {
   .card {
     height: 45em;
@@ -160,11 +206,38 @@ body {
     width: 50%;
     height: 35em;
   }
+
+  .footer .topList {
+    border-top: 1px solid black;
+    padding-top: 20px;
+  }
+
+  .footer .bottomList {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+  }
+
 }
 
 @media (max-width: 600px) {
   .card {
     height: 25em;
+  }
+
+  .footer {
+    align-items: start;
+  }
+
+  .footer .topList {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer .bottomList {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
