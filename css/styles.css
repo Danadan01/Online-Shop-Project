@@ -52,7 +52,6 @@ body {
   border-radius: 2px;
   padding: 0 6px;
   align-items: flex-end;
-
 }
 
 /* Change the color of links on hover */
@@ -105,25 +104,72 @@ body {
 .secondary-navigation, .navIcons a.split {
   float: right;
 }
-
-.dropdown-content {
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  margin: 10px auto 10;
+  text-align: center;
+ }
+ .Question-container {
   display: none;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 32.6%;
+  height: 170px;
+}
+/* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+  display: none;
   z-index: 12;
-  content: "";
-  border: 16px solid transparent;
-  position: absolute;
-  top: -31px;
-
+  background-color: #fff;
+  justify-content: center;
+  position: relative;
+  padding: 0 1px 1px;
+  margin: 10px auto 0;
+  text-align: center;
 } 
-.dropdown-content .information-section a {
+.dropdown-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+  /* Links inside the dropdown */
+.dropdown-content a {
   color: black;
-  padding: 10px 16px;
+  padding: 0px 18px;
   text-decoration: none;
   display: block;
 }
+.a-image {
+  height: 90px;
+  width: 90px;
+  margin-top: 0px;
+}
+
+.text-q {
+  color: black;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 0px;
+  text-align: left;
+  font-size: 14px;
+  flex-wrap: nowrap;
+}
+/* Change color of dropdown links on hover */
+.text-q:hover{
+  background-color: black;
+  color: white;
+  line-height: 1.5em;
+  padding: 5px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+}
+.show {display: block;}
+
+
+
 .navIcons {
   font-family: 'Arket Sans SC Mono';
   font-size: 12px;
@@ -144,9 +190,9 @@ body {
   /*position: relative;*/
 }
 
-.topnav .icon {
+/*.topnav .icon {
 display: inline-flexbox;
-}
+}*/
 
 
 .d-width {
@@ -245,6 +291,3 @@ display: inline-flexbox;
       font-size: 16px;
   }
 }
-
-
-
