@@ -118,7 +118,7 @@ body {
 /* Dropdown Content (Hidden by Default) */
  .dropdown-content {
   display: none;
-  z-index: 12;
+  z-index: 1;
   background-color: #fff;
   justify-content: center;
   position: relative;
