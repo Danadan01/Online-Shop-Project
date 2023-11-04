@@ -1,13 +1,167 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Arket Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   font-weight: 400;
 }
 
 body h2, h3, h4, h5, p {
   margin: 0;
 }
+
+
+/* header section */
+
+.logo {
+  margin-right: 12px;
+  font-family: 'Arket Sans SC Mono';
+  font-size: 12px;
+  height: 20px;
+}
+/* Add  background color to the top navigation */
+.topnav {  
+  font-size: smaller;
+  margin-right: 14px;
+  background-color: #fdfafa;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: .05px;
+  transition: margin-top .5s ease;
+  align-items: flex-end;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 0 6px;
+  align-items: flex-end;
+}
+/* Change the color of links on hover */
+.navbar-nav a:hover {
+  background-color: black;
+  color: white;
+  padding: 0 6px;
+}
+
+.logo a {
+  height: 17px;
+  display: block;
+}
+.logo a:hover {
+  background-color: #fdfafa;
+  color: rgb(129, 126, 126);
+}
+.a-paragraph a {
+  color:#000;
+  text-decoration:none;
+}
+.a-paragraph a:visited {
+  text-decoration:none;
+}
+.a-paragraph a:hover {
+  color:rgb(139, 136, 136);
+  text-decoration:none;
+}
+
+.secondary-navigation  a {
+  margin-left:20px;
+}
+.secondary-navigation a:hover {
+  color:rgb(139, 136, 136);
+}
+.secondary-navigation, .navIcons a.split {
+  float: right;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  margin: 10px auto 10;
+  text-align: center;
+ }
+ .Question-container {
+  display: none;
+  width: 32.6%;
+  height: 170px;
+}
+/* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+  display: none;
+  z-index: 1;
+  background-color: #fff;
+  justify-content: center;
+  position: relative;
+  padding: 0 1px 1px;
+  margin: 10px auto 0;
+  text-align: center;
+} 
+.dropdown-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+  /* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 0px 18px;
+  text-decoration: none;
+  display: block;
+}
+.a-image {
+  height: 90px;
+  width: 90px;
+  margin-top: 0px;
+}
+
+.text-q {
+  color: black;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 0px;
+  text-align: left;
+  font-size: 14px;
+  flex-wrap: nowrap;
+}
+/* Change color of dropdown links on hover */
+.text-q:hover{
+  background-color: black;
+  color: white;
+  line-height: 1.5em;
+  padding: 5px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+}
+.show {display: block;}
+
+.navIcons {
+  font-family: 'Arket Sans SC Mono';
+  font-size: 12px;
+  height: 25px;
+}
+
+.topnav .navIcons {
+  font-size: 20px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.departments .department-item {
+  font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 6px;
+  letter-spacing: .05px;
+}
+
+/* header section */
 
 /* main section */
 
@@ -57,7 +211,11 @@ body h2, h3, h4, h5, p {
     "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 
-.container {
+.shop-button:hover {
+  color: gray;
+}
+
+.containerDiv {
   display: flex;
   flex-direction: column;
 }
@@ -66,7 +224,7 @@ body h2, h3, h4, h5, p {
   display: flex;
 }
 
-.card {
+.card-image {
   display: flex;
   align-items: end;
   justify-content: center;
@@ -78,7 +236,7 @@ body h2, h3, h4, h5, p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card button {
+.card-image button {
   padding: 15px 50px;
   background-color: white;
   border: none;
@@ -172,6 +330,7 @@ body h2, h3, h4, h5, p {
 
 .content-section .ImageBlocksWrapper .image-box img {
   width: 100%;
+  vertical-align: baseline;
 }
 
 .content-section .ImageBlocksWrapper .image-box a {
@@ -179,11 +338,11 @@ body h2, h3, h4, h5, p {
   text-decoration: none;
 }
 
-.content-section .ImageBlocksWrapper .image-box a:hover .caption {
+.content-section .ImageBlocksWrapper .image-box a:hover .captionDiv {
   color: grey;
 }
 
-.content-section .ImageBlocksWrapper .image-box .caption {
+.content-section .ImageBlocksWrapper .image-box .captionDiv {
   padding: 5px;
   background-color: #fff;
   position: absolute;
@@ -191,6 +350,7 @@ body h2, h3, h4, h5, p {
   color: black;
   bottom: 10px;
   left: 8px;
+  font-family: "Arket Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 
 .content-section .ImageBlocksWrapper .image-box .text-block {
@@ -253,6 +413,16 @@ body h2, h3, h4, h5, p {
   text-align: center;
   margin: 20px 30px 20px 30px;
 }
+
+.d-headline a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.d-headline a:hover {
+  color: gray;
+}
+
 .d-text-container {
   text-align: left;
   font-size: 14px;
@@ -277,6 +447,7 @@ body h2, h3, h4, h5, p {
 .footer ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
   gap: 15px;
@@ -311,19 +482,18 @@ body h2, h3, h4, h5, p {
 /* media rules */
 
 @media (max-width: 1920px) {
-  .card {
-    height: 45em;
+  .card-image {
+    height: 40em;
   }
 }
 
 @media (max-width: 1320px) {
-  .card {
+  .card-image {
     height: 35em;
   }
 }
-
 @media (max-width: 1024px) {
-  .card {
+  .card-image {
     height: 25em;
   }
 
@@ -333,7 +503,7 @@ body h2, h3, h4, h5, p {
 }
 
 @media (max-width: 880px) {
-  .card {
+  .card-image {
     height: 20em;
   }
 }
@@ -352,7 +522,7 @@ body h2, h3, h4, h5, p {
     flex-wrap: wrap;
   }
 
-  .card {
+  .card-image {
     width: 50%;
     height: 35em;
   }
@@ -372,11 +542,13 @@ body h2, h3, h4, h5, p {
   .footer .topList {
     border-top: 1px solid black;
     padding-top: 20px;
+    align-items: start;
   }
 
   .footer .bottomList {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
+    align-items: start;
   }
 
 }
@@ -404,7 +576,7 @@ body h2, h3, h4, h5, p {
 }
 
 @media (max-width: 600px) {
-  .card {
+  .card-image {
     height: 25em;
   }
 
@@ -426,9 +598,94 @@ body h2, h3, h4, h5, p {
 }
 
 @media (max-width: 450px) {
-  .card {
+  .card-image {
     height: 20em;
   }
 }
 
-/* media rules */
+@media (min-width: 992px) {
+  .navLinks {
+      font-size: 10px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .navLinks {
+      font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+      width: 80px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .navLinks {
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navLinks {
+      font-size: 13px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .navLinks {
+      font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navLinks {
+      font-size: 16px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .navLinks {
+      font-size: 10px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .navLinks {
+      font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+      width: 80px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .navLinks {
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navLinks {
+      font-size: 13px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .navLinks {
+      font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navLinks {
+      font-size: 16px;
+  }
+}
+
+
