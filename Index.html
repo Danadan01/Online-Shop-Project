@@ -347,7 +347,7 @@
           <h2>Selected reading</h2>
         </div>
         <div class="content">
-          <div class="readMore">
+          <div class="shortText">
             <p>
               The notion of the archive is one of ARKET’s central themes and
               runs as a common thread through the brand. It represents the
@@ -357,15 +357,16 @@
               <button class="readMoreButton">... Read more</button>
             </p>
           </div>
-          <div class="readLess">
+          <div class="longText">
             <p>
-              The notion of archive is one of ARKET’s central themes and runs as
-              a common thread through the brand. It represents the long-lasting
-              nature of our collections, an extensive library of design history
-              and vintage samples, our ideal of transparency, as well as the
-              inspiration for and name given to our in-store shelving system.
-              The digital ARKET / ARCHIVE captures research, inspiration, and
-              past projects, and forms the collective story of who we are.
+              The notion of the archive is one of ARKET’s central themes and
+              runs as a common thread through the brand. It represents the
+              long-lasting nature of our collections, an extensive library of
+              design history and vintage samples, our ideal of transparency, as
+              well as the inspiration for and name given to our in-store
+              shelving system. The digital ARKET / ARCHIVE captures research,
+              inspiration, and past projects, and forms the collective story of
+              who we are.
               <button class="readLessButton">Read less</button>
             </p>
           </div>
@@ -607,8 +608,133 @@
             ></a
           >
         </li>
-        <li><a href="#">Cookie Settings</a></li>
+        <li style="margin-bottom: 2px;"><a href="#" id="cookieBtn">Cookie Settings</a></li>
       </ul>
     </footer>
+
+    <div class="cookie-container">
+      <div class="cookie-background"></div>
+      <div class="cookie-modal">
+        <button class="closeModalBtn">x</button>
+        <div class="cookie-content">
+          <div class="policy-text">
+            <h2>Cookie category information</h2>
+            <p>
+              Below you´ll find detailed information about each cookie
+              category and the possibility to customize your settings. By
+              clicking "Accept All Cookies", you accept all cookies, and agree
+              that we share this information with third parties, such as our
+              advertising partners. This may in some cases mean your data will
+              be processed outside the EU/EEA. Cookies are stored only for as
+              long as needed to fulfill their purpose.
+            </p>
+            <p>
+              If you prefer, you can choose which cookie categories to accept
+              or not. Please keep in mind that blocking some types of cookies
+              may impact how we can deliver and improve our services to you.
+              When you're ready, click on 'Confirm My Choices' and remember,
+              you can always change your mind later.
+            </p>
+            <p>
+              If you want to learn more about cookies and why we use them, you
+              can visit our
+              <a href="/en_gbp/customer-service/privacy-notice/cookie.html"
+                >Cookie Policy</a
+              >
+              page anytime.
+            </p>
+            <div class="cookieBtnBox">
+              <button class="acceptAllCookiesBtn">Accept all cookies</button>
+            </div>
+          </div>
+          <div class="cookie-preferences">
+            <h3>Manage Consent Preferences</h3>
+            <div>
+              <div class="pref-header-box">
+                <h4>Strictly Necessary Cookies</h4>
+                <p>Always active</p>
+              </div>
+              <p>
+                These cookies are necessary to maintain our services and
+                cannot be switched off. They are usually only set in response
+                to actions made by you, such as creating an account or saving
+                a wish-list for later. You can set your browser to block or
+                alert you about these cookies, but that can make some parts of
+                the site not work. These cookies do not store any personally
+                identifiable information.
+              </p>
+            </div>
+            <div>
+              <div class="pref-header-box">
+                <h4>Performance Cookies</h4>
+                <label class="switch-box">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <p>
+                These cookies allow us to count visits and traffic so we can
+                collect insights like which pages are the most popular and see
+                how visitors move around the site. All information these
+                cookies collect is aggregated and therefore, anonymous. If you
+                do not allow these cookies, we will not be able to provide you
+                with a tailored experience.
+              </p>
+            </div>
+            <div>
+              <div class="pref-header-box">
+                <h4>Functional Cookies</h4>
+                <label class="switch-box">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <p>
+                These cookies enable the website to provide enhanced
+                functionality and personalization. They may be set by us or by
+                third party providers whose services we have added to our
+                pages. If you do not allow these cookies, then some or all of
+                these services may not function properly.
+              </p>
+            </div>
+            <div>
+              <div class="pref-header-box">
+                <h4>Marketing Cookies</h4>
+                <label class="switch-box">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <p>
+                When you accept marketing cookies, you give us your consent to
+                place cookies on your device to provide you with relevant
+                content that fits your interests. These cookies may be set
+                through our site by our advertising partners or us, to build a
+                profile of your interests and show you relevant content on our
+                and third-party sites. To be able to deliver content that fits
+                your interests, we will use your interactions together with
+                personal information you have provided to us on our site. To
+                present you with relevant content on third-party sites, we
+                will share this information and a customer identifier such as
+                an encrypted email-address or device id with third parties,
+                such as Google, Facebook, Instagram, and Snapchat. The purpose
+                is to show relevant ads to you on third party websites and
+                apps. The purpose is to show relevant ads to you on third
+                party websites and apps. To make the content as interesting as
+                possible for you, we may link this data across the different
+                devices you use. If you choose not to accept marketing
+                cookies, we will not place such cookies on your device, and
+                you may experience less relevant content from us.
+              </p>
+            </div>
+            <div class="save-preference">
+              <button class="savePreferenceBtn">Confirm My Choices</button>
+              <button class="onlyRequiredBtn">Only required cookies</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>
