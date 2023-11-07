@@ -10,12 +10,15 @@ body h2, h3, h4, h5, p {
 
 
 /* header section */
+header {
+  position: relative;
+}
 
 .logo {
-  margin-right: 12px;
   font-family: 'Arket Sans SC Mono';
-  font-size: 12px;
-  height: 20px;
+  /* font-size: 12px; */
+  height: 16px;
+  margin-bottom: 3px;
 }
 /* Add  background color to the top navigation */
 .topnav {  
@@ -31,6 +34,19 @@ body h2, h3, h4, h5, p {
   letter-spacing: .05px;
   transition: margin-top .5s ease;
   align-items: flex-end;
+}
+
+#navbarNavDropdown {
+  justify-content: space-between;
+}
+
+.icons-list {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the links inside the navigation bar */
@@ -70,7 +86,7 @@ body h2, h3, h4, h5, p {
 }
 
 .secondary-navigation  a {
-  margin-left:20px;
+  padding: 0px;
 }
 .secondary-navigation a:hover {
   color:rgb(139, 136, 136);
@@ -79,42 +95,54 @@ body h2, h3, h4, h5, p {
   float: right;
 }
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  margin: 10px auto 10;
+.dropdown { 
+  display: inline-block;
+  position: absolute;
+  }
+  
+  /* Style the dropdown button/link */
+.dropbtn {
+  display: block;
+  color: white;
   text-align: center;
- }
+  text-decoration: none;
+} 
  .Question-container {
-  display: none;
   width: 32.6%;
-  height: 170px;
+  height: 115px;
 }
+
+.Question-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.Question-container:hover {
+  .text-q {
+    background-color: black;
+    color: white;
+  }
+}
+
 /* Dropdown Content (Hidden by Default) */
  .dropdown-content {
   display: none;
   z-index: 1;
   background-color: #fff;
   justify-content: center;
-  position: relative;
-  padding: 0 1px 1px;
-  margin: 10px auto 0;
+  position: fixed;
+  padding: 10px 15px;
   text-align: center;
-} 
-.dropdown-content {
-  width: 100%;
-  display: flex;
+  width: 500px;
+  height: 300px;
+  left: 50%;
+  top: 14%;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  }
-  /* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 0px 18px;
-  text-decoration: none;
-  display: block;
-}
+} 
+
 .a-image {
   height: 90px;
   width: 90px;
@@ -128,18 +156,9 @@ body h2, h3, h4, h5, p {
   margin-right: 0px;
   text-align: left;
   font-size: 14px;
-  flex-wrap: nowrap;
+  padding: 5px;
 }
-/* Change color of dropdown links on hover */
-.text-q:hover{
-  background-color: black;
-  color: white;
-  line-height: 1.5em;
-  padding: 5px 6px;
-  border-radius: 2px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-}
+
 .show {display: block;}
 
 .navIcons {
@@ -153,13 +172,15 @@ body h2, h3, h4, h5, p {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.departments .department-item {
+.navTop .nav-item {
   font-family: 'Arket Sans SC',HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 200;
+  font-size: 12px;
   padding: 0 6px;
   letter-spacing: .05px;
 }
+
+
 
 /* header section */
 
@@ -747,6 +768,13 @@ input:checked ~ .slider:before {
     height: 35em;
   }
 }
+
+@media (max-width: 1030px) {
+  .navTop .nav-item {
+    padding: 0;
+  }
+}
+
 @media (max-width: 1024px) {
   .card-image {
     height: 25em;
@@ -884,10 +912,12 @@ input:checked ~ .slider:before {
 }
 
 @media (min-width: 1200px) {
-  .logo {
-      width: 80px;
+  .navLink {
+    font-size: 12px;
   }
+
 }
+
 
 @media (min-width: 1220px) {
   .navLinks {
@@ -913,4 +943,24 @@ input:checked ~ .slider:before {
   }
 }
 
+
+@media (min-width: 769px){
+  .header {
+    height: 56px;
+    padding: 19px 19px 20px;
+  }
+
+  .header:after {
+    height: 2px;
+    left: 19px;
+    right: 19px;
+  }
+}
+
+@media (min-width: 401px){
+  .header {
+    background-color: #fff;
+    box-shadow: 0 17px 32px transparent;
+  }
+}
 
